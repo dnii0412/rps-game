@@ -1,28 +1,28 @@
 const gameField = document.getElementById("game");
 const mainMenu = document.getElementById("main-menu");
 const timerHolder = document.getElementById("timer-holder");
-const startTimer = document.getElementById("startTimer");
+const secondIndicator = document.getElementById("scnd-txt");
+const startBtn = document.getElementById("startBtn");
+
 function start() {
   mainMenu.style.display = "none";
   gameField.style.display = "block";
 }
 
-// timer
+// event listeners
 
-startTimer.addEventListener("click", startTimerFunc);
-let seconds = 5;
-let timer = null;
+let count = 1;
 
-function updateDisplay() {
-  timerHolder.textContent.seconds;
-  console.log(timerHolder);
-}
+function startTimer() {
+  const timer = setInterval(() => {
+    count--;
+    timerHolder.textContent = count;
 
-function startTimerFunc() {
-  if (timer === null) {
-    timer = setInterval(() => {
-      seconds--;
-      updateDisplay();
-    }, 1000);
-  }
+    if (count <= 0) {
+      clearInterval(timer);
+      timerHolder.textContent = "Time's Up!";
+      secondIndicator.style.display = "none";
+      startBtn.textContent = "Start Again";
+    }
+  }, 1000); // Update every 1000 milliseconds (1 second)
 }
