@@ -1,20 +1,28 @@
-const startBtn = document.getElementById("startBtn");
-const gameField = document.querySelector(".score");
-const images = document.querySelector(".images");
-gameField.style.display = "none";
-
+const gameField = document.getElementById("game");
+const mainMenu = document.getElementById("main-menu");
+const timerHolder = document.getElementById("timer-holder");
+const startTimer = document.getElementById("startTimer");
 function start() {
-  startBtn.style.display = "none";
+  mainMenu.style.display = "none";
   gameField.style.display = "block";
-  images.style.flexDirection = "column";
-  images.style.alignItems = "start";
-  images.style.marginTop = "24px";
+}
 
-  gameField.innerHTML += `
-    <div className="score-field">
-      <div className="player">
-        
-      </div>
-    </div>
-  `;
+// timer
+
+startTimer.addEventListener("click", startTimerFunc);
+let seconds = 5;
+let timer = null;
+
+function updateDisplay() {
+  timerHolder.textContent.seconds;
+  console.log(timerHolder);
+}
+
+function startTimerFunc() {
+  if (timer === null) {
+    timer = setInterval(() => {
+      seconds--;
+      updateDisplay();
+    }, 1000);
+  }
 }

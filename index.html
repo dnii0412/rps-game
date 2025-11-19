@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RPS game</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <main>
+    <main id="main-menu">
       <p class="headline">Rock Paper Scissors game</p>
-
-      <div class="score">
-        
-      </div>
 
       <section class="images-container">
         <div div class="images">
@@ -24,6 +26,52 @@
 
       <div class="button-container">
         <button id="startBtn" onclick="start()">Start Game</button>
+      </div>
+    </main>
+
+    <main class="game-field" id="game">
+      <div class="innergame">
+        <section class="player">
+          <div div class="player-images">
+            <img class="rock" src="public/rock.png" alt="rock" />
+            <img class="paper" src="public/paper.png" alt="paper" />
+            <img class="scissor" src="public/scissor.png" alt="scissor" />
+          </div>
+        </section>
+
+        <scetion class="timer-sore-holder">
+          <aside class="timer" id="timer">
+            <p id="timer-holder">5</p>
+            <p>second</p>
+          </aside>
+
+          <aside class="point">
+            <p class="player-score">
+              <legend>Me</legend>
+              0
+            </p>
+            <p class="separator">
+              <legend> </legend>
+              :
+            </p>
+            <p class="bot-score">
+              <legend>Bot</legend>
+              0
+            </p>
+          </aside>
+
+          <aside class="startgame">
+            <button id="startTimer" onclick="startTimer()">Start Game</button>
+          </aside>
+        </scetion>
+
+        <section class="bot">
+          <div div class="bot-images">
+            <img class="rock" src="public/rock.png" alt="rock" />
+            <img class="paper" src="public/paper.png" alt="paper" />
+            <img class="scissor" src="public/scissor.png" alt="scissor" />
+          </div>
+        </section>
       </div>
     </main>
   </body>
