@@ -5,77 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RPS game</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
-    <main id="main-menu">
-      <p class="headline">Rock Paper Scissors game</p>
-
-      <section class="images-container">
-        <div div class="images">
-          <img class="rock" src="public/rock.png" alt="rock" />
-          <img class="paper" src="public/paper.png" alt="paper" />
-          <img class="scissor" src="public/scissor.png" alt="scissor" />
-        </div>
-      </section>
-
-      <div class="button-container">
-        <button id="startBtn" onclick="start()">Start Game</button>
+    <main class="menu">
+      <!-- headline -->
+      <div class="headline">
+        <h1 class="title">Rock, Paper, Scissors</h1>
+      </div>
+      <!-- buttons -->
+      <div class="player-buttons">
+        <p class="rock">🗿</p>
+        <p class="paper">✋</p>
+        <p class="scissors">✌️</p>
+      </div>
+      <!-- button values per player -->
+      <div class="player-values">
+        <p class="player">Player: Rock</p>
+        <p class="computer">Computer: Paper</p>
+      </div>
+      <!-- game points -->
+      <div class="game-points">
+        <p id="player-point">Player:</p>
+        <p id="bot-point">BOT:</p>
+      </div>
+      <!-- game result -->
+      <div class="game-result">
+        <p class="tie">It's A Tie!</p>
+        <p class="player-win">Win!</p>
+        <p class="bot-win">Bot Wins!</p>
       </div>
     </main>
 
-    <main class="game-field" id="game">
-      <div class="innergame">
-        <section class="player">
-          <div div class="player-images">
-            <img class="rock" src="public/rock.png" alt="rock" />
-            <img class="paper" src="public/paper.png" alt="paper" />
-            <img class="scissor" src="public/scissor.png" alt="scissor" />
-          </div>
-        </section>
-
-        <scetion class="timer-sore-holder">
-          <aside class="timer" id="timer">
-            <p id="timer-holder">5</p>
-            <p id="scnd-txt">second</p>
-          </aside>
-
-          <aside class="point">
-            <p class="player-score">
-              <legend>Me</legend>
-              0
-            </p>
-            <p class="separator">
-              <legend> </legend>
-              :
-            </p>
-            <p class="bot-score">
-              <legend>Bot</legend>
-              0
-            </p>
-          </aside>
-
-          <aside class="startgame">
-            <p id="startBtn" onclick="startTimer()">Start Game</p>
-            <!-- <button class="stop-timer" onclick="stopTimer()" >Stop</button> -->
-            <!-- <button class="reset-timer" onclick="resetTimer()" >Stop</button> -->
-          </aside>
-        </scetion>
-
-        <section class="bot">
-          <div div class="bot-images">
-            <img class="rock" id="rock" src="public/rock.png" alt="rock" />
-            <img class="paper" id="paper" src="public/paper.png" alt="paper" />
-            <img class="scissor" id="scissor" src="public/scissor.png" alt="scissor" />
-          </div>
-        </section>
-      </div>
-    </main>
+    <script src="app.js"></script>
   </body>
-  <script src="app.js"></script>
 </html>
