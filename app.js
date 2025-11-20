@@ -32,13 +32,4 @@ function startTimer() {
   }, 1000); // Update every 1000 milliseconds (1 second)
 }
 
-const playerValues = rock || paper || scissor;
-const botValues = rock || paper || scissor;
-
-const playerWinCondition =
-  (rock && scissor) || (paper && rock) || (scissor && paper);
-
-const botWinCondition =
-  (rock && scissor) || (paper && rock) || (scissor && paper);
-
-  
+//  game logic below
