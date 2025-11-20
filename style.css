@@ -200,16 +200,19 @@ legend {
   height: 60px;
   margin-top: 32px;
 }
-.startgame > button {
+.startgame > p {
   width: 240px;
   height: 60px;
   border-radius: 18px;
   background-color: var(--green);
   color: var(--soft-white);
   border: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
   transition: 0.1s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.startgame > button:hover {
+.startgame > p:hover {
   background-color: var(--dark-green);
 }

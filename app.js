@@ -4,6 +4,11 @@ const timerHolder = document.getElementById("timer-holder");
 const secondIndicator = document.getElementById("scnd-txt");
 const startBtn = document.getElementById("startBtn");
 
+// game buttons
+const rock = document.getElementById("rock");
+const paper = document.getElementById("paper");
+const scissor = document.getElementById("scissor");
+
 function start() {
   mainMenu.style.display = "none";
   gameField.style.display = "block";
@@ -11,7 +16,7 @@ function start() {
 
 // event listeners
 
-let count = 1;
+let count = 5;
 
 function startTimer() {
   const timer = setInterval(() => {
@@ -26,3 +31,14 @@ function startTimer() {
     }
   }, 1000); // Update every 1000 milliseconds (1 second)
 }
+
+const playerValues = rock || paper || scissor;
+const botValues = rock || paper || scissor;
+
+const playerWinCondition =
+  (rock && scissor) || (paper && rock) || (scissor && paper);
+
+const botWinCondition =
+  (rock && scissor) || (paper && rock) || (scissor && paper);
+
+  
