@@ -65,13 +65,13 @@ body {
   color: gray;
 }
 .game-points {
+  margin-top: 1rem;
   width: 50%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   font-size: 3rem;
   font-weight: 600;
-  border: 1px solid black;
 }
 #player-point {
   color: blue;
@@ -81,6 +81,25 @@ body {
 }
 /* game result */
 .game-result {
+  margin-top: 1rem;
   width: 50%;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.tie {
+  color: gray;
+  font-size: 4rem;
+  display: none;
+}
+.player-win{
+  color: blue;
+  font-size: 4rem;
+  display: none;
+}
+.bot-win{
+  color: red;
+  font-size: 4rem;
+  display: none;
 }
