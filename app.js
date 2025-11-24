@@ -8,3 +8,9 @@ const scissor = document.getElementById("scissor");
 
 let playerScore = document.getElementById("player-point");
 let botScore = document.getElementById("bot-point");
+
+//players choice and
+const botChoices = ["rock", "paper", "scissors"];
+const botChoice = Math.floor(Math.random(botChoices))
+
+console.log(botChoice)
