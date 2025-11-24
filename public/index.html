@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RPS game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="menu">
+      <!-- headline -->
+      <div class="headline">
+        <h1 class="title">Rock, Paper, Scissors</h1>
+      </div>
+      <!-- buttons -->
+      <div class="player-buttons">
+        <p id="rock" class="rock">🗿</p>
+        <p id="paper" class="paper">✋</p>
+        <p id="scissor" class="scissor">✌️</p>
+      </div>
+      <!-- button values per player -->
+      <div class="player-values">
+        <p class="player">Player: <p id="player-point">0</p> </p>
+        <p class="computer">Computer: <p id="bot-point">0</p></p>
+      </div>
+      <!-- game points -->
+      <!-- <div class="game-points">
+        <p id="player-point">0</p>
+        <p id="bot-point">0</p>
+      </div> -->
+      <!-- game result -->
+      <div class="game-result">
+        <p class="tie">It's A Tie!</p>
+        <p class="player-win">Win!</p>
+        <p class="bot-win">Bot Wins!</p>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
