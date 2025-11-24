@@ -9,8 +9,22 @@ const scissor = document.getElementById("scissor");
 let playerScore = document.getElementById("player-point");
 let botScore = document.getElementById("bot-point");
 
-//players choice and
-const botChoices = ["rock", "paper", "scissors"];
-const botChoice = Math.floor(Math.random(botChoices))
+let playerChoice = "";
+let botChoice = "";
+rock.addEventListener("click", () => handlePlayerChoice("rock"));
+paper.addEventListener(type, listener)
 
-console.log(botChoice)
+// Bot choice values
+const values = ["rock", "paper", "scissors"];
+
+// Function to get bot's random choice
+function getBotChoice() {
+  const randomValue = Math.floor(Math.random() * values.length);
+  return values[randomValue];
+}
+
+// Function to handle player's choice
+
+// TODO: Compare choices and determine winner
+// TODO: Update scores
+// TODO: Display results
