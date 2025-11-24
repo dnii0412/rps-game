@@ -8,7 +8,7 @@ const scissor = document.getElementById("scissor");
 
 // win or lose and tie
 const winTxt = document.querySelector(".player-win");
-const botwWinTxt = document.querySelector(".bot-win");
+const botWinTxt = document.querySelector(".bot-win");
 const tieTxt = document.querySelector(".tie");
 
 // displpay the choices
@@ -59,34 +59,34 @@ function compareChoices() {
   if (playerChoice === botChoice) {
     tieTxt.style.display = "block";
     winTxt.style.display = "none";
-    botwWinTxt.style.display = "none";
+    botWinTxt.style.display = "none";
     // botTxt.textContent += " " + botChoice;
     // playerTxt.textContent += " " + playerChoice;
     return "tie";
   }
   // player win conditions
   if (
-    (playerChoice === "rock" && botChoice === "scissor") ||
+    (playerChoice === "rock" && botChoice === "scissors") ||
     (playerChoice === "paper" && botChoice === "rock") ||
     (playerChoice === "scissor" && botChoice === "paper")
   ) {
     winTxt.style.display = "block";
-    botwWinTxt.style.display = "none";
+    botWinTxt.style.display = "none";
     tieTxt.style.display = "none";
-    playerScore.textContent++;
+    playerScore.textContent = parseInt(playerScore.textContent) + 1;
     // playerTxt.textContent += " " + playerChoice;
     // botTxt.textContent += " " + botChoice;
     return "player-win";
   }
   // bot win conditions
   if (
-    (playerChoice === "paper" && botChoice === "scissor") ||
+    (playerChoice === "paper" && botChoice === "scissors") ||
     (playerChoice === "scissor" && botChoice === "rock") ||
     (playerChoice === "rock" && botChoice === "paper")
   ) {
     document.querySelector(".bot-win").style.display = "block";
-    botScore.textContent++;
-    botwWinTxt.style.display = "block";
+    botScore.textContent = parseInt(botScore.textContent) + 1;
+    botWinTxt.style.display = "block";
     winTxt.style.display = "none";
     tieTxt.style.display = "none";
     // playerTxt.textContent += " " + playerChoice;
