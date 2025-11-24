@@ -50,6 +50,9 @@ body {
   align-items: center;
   transition: 0.1s ease-in-out;
 }
+.paper{
+  /* font-size: 3rem; */
+}
 .player-buttons > p:hover {
   background-color: rgb(145, 184, 255);
 }
