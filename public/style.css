@@ -50,7 +50,7 @@ body {
   align-items: center;
   transition: 0.1s ease-in-out;
 }
-.paper{
+.paper {
   /* font-size: 3rem; */
 }
 .player-buttons > p:hover {
@@ -96,13 +96,20 @@ body {
   font-size: 4rem;
   display: none;
 }
-.player-win{
+.player-win {
   color: blue;
   font-size: 4rem;
   display: none;
 }
-.bot-win{
+.bot-win {
   color: red;
   font-size: 4rem;
   display: none;
+}
+.idk {
+  margin-top: 32px;
+}
+.idk > p {
+  font-size: 1.2rem;
+  gap: 4px;
 }
